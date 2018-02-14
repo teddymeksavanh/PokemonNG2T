@@ -10,8 +10,6 @@ before_install:
 - sudo apt-get install nodejs
 - sudo apt-get install npm
 - npm install
-script:
-- npm start
 deploy:
   provider: heroku
   api_key:
