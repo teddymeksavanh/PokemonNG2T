@@ -20,7 +20,10 @@ export class PokemonsComponent implements OnInit {
 	getPokemons(): void {
 		this.pokemonService
 			.getPokemons()
-			.then(pokemons => this.pokemons = pokemons)
+			.then(pokemons => {
+                console.log('pokemons', pokemons);
+                return this.pokemons = pokemons
+            })
 			.catch(error => this.error = error);
 	}
 
