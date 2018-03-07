@@ -14,10 +14,6 @@
 	color: white;
 }
 
-.pkm-modal-header{
+.pkm-modal > .modal-header, .pkm-modal .modal-header{
 	border-bottom: 0 !important;
-}
-
-.pkm-modal-footer{
-	border-top: 0 !important;
 }

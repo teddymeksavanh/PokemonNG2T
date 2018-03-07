@@ -20,7 +20,10 @@
 
 		<div class="row">
 			<img class="pokemon-icon" src="../assets/more.png" (click)="myModal.open()"/>
-	    <modal #myModal>
+	    <modal
+			#myModal
+			modalClass="pkm-modal"
+		>
 		<modal-header class="pkm-modal-header"></modal-header>
         <modal-content>
         	<div class="col-md-12">

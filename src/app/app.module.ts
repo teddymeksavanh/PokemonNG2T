@@ -6,9 +6,9 @@ import { ModalModule } from 'ngx-modal';
 import { LocalStorageModule } from 'angular-2-local-storage';
 
 import { AppComponent } from './app.component';
-import { PokemonService } from './pokemon.service';
-import { PokemonsComponent } from './pokemons/pokemons.component';
-import { CamelCasePipe } from './camel-case.pipe';
+import { PokemonService } from './services/pokemon.service';
+import { PokemonsComponent } from './components/pokemons/pokemons.component';
+import { CamelCasePipe } from './pipes/camel-case.pipe';
 
 @NgModule({
   declarations: [

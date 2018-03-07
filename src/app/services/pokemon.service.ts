@@ -4,7 +4,7 @@ import { LocalStorageService } from 'angular-2-local-storage';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Pokemon } from './pokemon';
+import { Pokemon } from '../models/pokemon';
 
 @Injectable()
 export class PokemonService {
@@ -17,7 +17,7 @@ export class PokemonService {
   ) { }
 
   getPokemons(): Promise<Array<Pokemon>> {
-   
+
     return new Promise((resolve, reject) => {
 
       //Check if pokemons data already exist in localStorage
@@ -33,17 +33,17 @@ export class PokemonService {
             const pokemonPromises = pokemons.map( pokeObj =>
               this.getPokemon(pokeObj.url)
             )
-                                                 
+
             Promise.all(pokemonPromises)
               .then((values) => {
                   this.localStorageService.set('pokemons', values)
                   resolve(values)
               })
               .catch(reject)
-         
+
         })
         .catch(this.handleError);
-      }   
+      }
     })
   }
 
