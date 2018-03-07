@@ -21,13 +21,15 @@
 		<div class="row">
 			<img class="pokemon-icon" src="../assets/more.png" (click)="myModal.open()"/>
 	    <modal #myModal>
-        <modal-header>
-            <h2>{{pokemon.name | camelCase }}</h2>
-        </modal-header>
+		<modal-header class="pkm-modal-header"></modal-header>
         <modal-content>
         	<div class="col-md-12">
         		<img class="display-block pokemon-sprite" src="{{pokemon.sprites.front_default}}"/>
         	</div>
+
+			<div class="col-md-12">
+				<h2>{{pokemon.name | camelCase }}</h2>
+			</div>
 
         	<div class="col-md-12 enhance-margin">
 	         	<div class="col-md-6 col-sm-6 col-xs-6">
@@ -57,7 +59,7 @@
 	        </div>
 
         </modal-content>
-        <modal-footer>
+        <modal-footer class="pkm-modal-footer">
           <button class="btn btn-success" (click)="myModal.close()">Close</button>
 				</modal-footer>
 	    </modal>
